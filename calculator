@@ -1,0 +1,30 @@
+num = float(input( "Enter a number : "))
+operate = input( "Enter an operator ")
+num2 = float(input( "Enter another number: "))
+
+def sum():
+   return num+num2
+
+def minus():
+   return num-num2
+
+def multiply():
+   return num*num2
+
+def divide():
+   return num/num2
+
+if operate == "+":
+    print(sum())
+
+elif operate == "-":
+    print(minus())
+
+elif operate == "*":
+    print(multiply())
+
+elif operate == "/":
+    print(divide())
+
+else :
+    print( "Invalid operator")
