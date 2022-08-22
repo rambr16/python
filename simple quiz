@@ -1,0 +1,40 @@
+print("Welcome to the best game")
+
+playing = input("Do you wish to continue? Y/N : ")
+
+if playing.lower() != "y":
+    quit()
+
+print("Ok! Let's play!")
+score = 0
+
+answer = input( "What does RAM stand for? ")
+if answer.lower() == "random access memory":
+    print("Correct!")
+    score += 1
+else:
+    print("Wrong answer!")
+
+answer = input( "What does MAD stand for? ")
+if answer.lower() == "music art dance":
+    print("Correct!")
+    score += 1
+else:
+    print("Wrong answer!")
+
+answer = input( "What does BAD stand for? ")
+if answer.lower() == "bang another door":
+    print("Correct!")
+    score += 1
+else:
+    print("Wrong answer!")
+
+answer = input( "What does DAM stand for? ")
+if answer.lower() == "die another month":
+    print("Correct!")
+    score += 1
+else:
+    print("Wrong answer!")
+
+print("Your score is " + str(score) + "/4!")
+print("You have answered " + str((score / 4) * 100)+" percent! ")
