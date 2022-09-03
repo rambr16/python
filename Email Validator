@@ -1,0 +1,22 @@
+import re
+print("Welcome to email checker")  #welcome message
+email= input("Enter your email: ").lower() #input email id
+regex = re.compile('[!#$%^&*()<>?/\|}{~: ]') # A variable with contains string  of special characters to be searched.
+if len(email)>= 6:
+    if email[0].isalpha():
+        if ("@" in email) and (email.count("@") == 1):
+            if (email[-3] == ".") ^ (email[-4] == "."):
+                    if (regex.search(email) != None):
+                        print("Sorry, Email Id cannot contain special character or space")
+                    else:
+                        print("Yay! This is a correct email format!")
+            else:
+                print("Sorry, Email should end with either a .in or .com")
+        else:
+            print("Sorry, email cannot contain more than one @")
+    else:
+        print("Sorry, email cannot start with a numeral")
+else:
+    print("Wrong email - Cannot be less than 6 characters ")
+
+
